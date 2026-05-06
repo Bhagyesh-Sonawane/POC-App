@@ -10,7 +10,16 @@ import invoiceRoutes from './src/routes/invoiceRoutes.js';
 const app = express();
 
 // ✅ MIDDLEWARE
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://poc-app-xi.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 // ✅ ROUTES
