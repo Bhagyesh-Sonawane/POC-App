@@ -16,7 +16,6 @@ app.use(
       "http://localhost:5173",
       "https://poc-app-xi.vercel.app"
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
   })
 );
